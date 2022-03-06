@@ -3,6 +3,7 @@
   let newTodo = '';  // 2-way bound variable for new todo
 
   const handleSubmit = () => {
+    if (newTodo.length === 0) return;
     addTodo(newTodo);
     newTodo = '';
   };
