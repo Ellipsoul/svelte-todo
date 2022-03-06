@@ -1,10 +1,12 @@
 <script>
-  import {addTodo} from "../stores/todoStore";
+  import { addTodo } from "../stores/todoStore";
+  import { user } from "../stores/authStore";
   let newTodo = '';  // 2-way bound variable for new todo
 
+  // Calls the todoStore to add a new todo on form submit
   const handleSubmit = () => {
     if (newTodo.length === 0) return;
-    addTodo(newTodo);
+    addTodo(newTodo, $user.id);
     newTodo = '';
   };
 </script>

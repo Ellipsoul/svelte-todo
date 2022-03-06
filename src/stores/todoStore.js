@@ -12,7 +12,7 @@ export const loadTodos = async () => {
 };
 
 // Add a new todo to the list
-export const addTodo = async (text, user_id = null) => {
+export const addTodo = async (text, user_id) => {
 	// Insert new todo into supabase table
 	const { data, error } = await supabase
 		.from('todos')
